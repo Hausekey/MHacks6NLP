@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import url
+from django.conf.urls import patterns
 
 from . import views
 
-urlpatterns = [
-    url(r'^$', views.index, name='index'),
-]
+urlpatterns = patterns('mhacksnlp.views',
+    url(r'^Home/$', 'landingview', name="landingview"),
+)

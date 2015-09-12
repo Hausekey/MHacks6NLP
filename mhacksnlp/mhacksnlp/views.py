@@ -1,5 +1,7 @@
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
+class LandingView(TemplateView):
+    template_name = "landingpage.html"
 
-def index(request):
-    return HttpResponse("Hello, world. You're at inthelines.")
+landingview = LandingView.as_view()
